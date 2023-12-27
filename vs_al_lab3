@@ -1,0 +1,25 @@
+def diagonal_average(matrix):
+    if len(matrix) != len(matrix[0]):
+        print("Massivin ölçüsü düzgün deyil")
+        return None
+
+    n = len(matrix)
+    diagonal_sum = 0
+
+    for i in range(n):
+        diagonal_sum += matrix[i][i]
+
+    diagonal_average = diagonal_sum / n
+    return diagonal_average
+
+# Nümunə kimi bir massiv
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+result = diagonal_average(matrix)
+
+if result is not None:
+    print(f"Baş diaqonalda yerləşən elementlərin həndəsi ortası: {result}")
